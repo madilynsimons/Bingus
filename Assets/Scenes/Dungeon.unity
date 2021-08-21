@@ -151,7 +151,7 @@ SphereCollider:
   m_GameObject: {fileID: 326062642}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -212,7 +212,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 326062642}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.06, y: 1.66, z: 0.58}
+  m_LocalPosition: {x: 15.06, y: 1.48, z: 0.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1656633659}
@@ -245,7 +245,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341150225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.66, z: 9.84}
+  m_LocalPosition: {x: 1.13, y: 2.65, z: 9.84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1656633659}
@@ -260,7 +260,7 @@ SphereCollider:
   m_GameObject: {fileID: 341150225}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -341,7 +341,7 @@ SphereCollider:
   m_GameObject: {fileID: 761088175}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -402,7 +402,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 761088175}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.9, y: 1.66, z: 9.84}
+  m_LocalPosition: {x: 7.9, y: 5.16, z: 11.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1656633659}
@@ -516,6 +516,7 @@ GameObject:
   - component: {fileID: 1172105819}
   - component: {fileID: 1172105825}
   - component: {fileID: 1172105824}
+  - component: {fileID: 1172105826}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -640,6 +641,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bc1b10b20cf2554b8a7c18dff617636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!143 &1172105826
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172105818}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1389776184
 GameObject:
   m_ObjectHideFlags: 0
@@ -929,7 +948,7 @@ SphereCollider:
   m_GameObject: {fileID: 2066078070}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}

@@ -15,9 +15,8 @@ public class BoxService : MonoBehaviour
     void Start()
     {
         m_conveyorBeltComponent = GameObject.FindWithTag("ConveyorBelt").GetComponent<ConveyorBeltComponent>();
-        
-        var startPosition = m_conveyorBeltComponent.ConveyorBeltPoints[m_iterator].transform.position;
-        transform.position = startPosition;
+
+        transform.position = m_conveyorBeltComponent.ConveyorBeltPoints[m_iterator].transform.position;
         m_iterator++;
     }
 
@@ -29,6 +28,7 @@ public class BoxService : MonoBehaviour
             return;
         }
         
+        // Try to destroy the game object
         if (m_iterator >= m_conveyorBeltComponent.ConveyorBeltPoints.Length)
         {
             Destroy(gameObject);
@@ -36,6 +36,7 @@ public class BoxService : MonoBehaviour
             return;
         }
         
+        // Try to move on to the next conveyor belt point
         var targetPosition = m_conveyorBeltComponent.ConveyorBeltPoints[m_iterator].transform.position;
         if (Vector3.Distance(transform.position, targetPosition) < 0.001f)
         {
@@ -43,6 +44,7 @@ public class BoxService : MonoBehaviour
             return;
         }
         
+        // Move towards the point
         var step = m_conveyorBeltComponent.Speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, step);
     }
