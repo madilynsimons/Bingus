@@ -53,7 +53,6 @@ public class ConveyorBoxService : MonoBehaviour
         //if (Vector3.Distance(transform.position, targetPosition) < 0.001f)
         if (Vector3.Distance(transform.position, targetPosition) < 0.5f)
         {
-            Debug.Log("Increasing iterator");
             m_iterator++;
             return;
         }
